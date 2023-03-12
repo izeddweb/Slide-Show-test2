@@ -9,25 +9,33 @@ const span = document.querySelectorAll('span');
 let sourceImage = contentImage.getAttribute('src');
 
 
+
 // ******************** Set Function 
 
 btns.forEach(function(ele){
+  let counter = 1;
+  let maxCounter = 5;
+  let minCounter = 1;
   ele.onclick = function (){
-    for ( let i = 1; i <= 4;i++) {
-
-      // sourceImage  = `/img-slide/${i}.JPG`;
       if( ele.textContent == "next"){
-        contentImage.setAttribute('src',`/img-slide/${i}.JPG`)
+        counter++;
+        console.log(counter);
+        if( counter == maxCounter){
+          counter = 1;
+        }
+        contentImage.setAttribute('src',`/img-slide/${counter}.JPG`);
       }else if( ele.textContent == "prev"){
-        contentImage.setAttribute('src',`/img-slide/${i}.JPG`)
+        counter -= 1;
+        console.log(counter);
+        if( counter <= minCounter){
+          counter = 5;
+          counter--;
+          console.log('tssss');
+        }
+        contentImage.setAttribute('src',`/img-slide/${counter}.JPG`)
       }
-      
-    }
-    console.log(sourceImage);
     console.log(contentImage.getAttribute('src'));
   }
 });
-
-
 
 
