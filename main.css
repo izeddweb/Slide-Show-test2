@@ -28,12 +28,16 @@ body{
   height: 100%;
   background-size: cover;
 }
+/*    star button */
 .content button{
   position: absolute;
   width: 30px;
   height: 30px;
   cursor: pointer ;
-  /* background-color: #fff; */
+  opacity:.4;
+}
+button:hover {
+  opacity:1;
 }
 .btn-prev{
   top: 50%;
@@ -43,27 +47,38 @@ body{
   top: 50%;
   right: 10px;
 }
+/*     end button */
+/*     star span-content */
+.span-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: -20px;
+}
 span{
-  position: absolute;
-  /* margin: 0 10px; */
   width: 10px;
   height: 10px;
   background-color: #fff;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+  opacity: .5;
+
 }
-.sp1{
-  left: 49%;
-  bottom: 10px;
+span:hover{
+  opacity:1;
 }
-.sp2{
-  left: 50%;
-  bottom: 10px;
+
+/* dynamic style for span */
+.span-style{
+  background-color: "red";
+  width: 30px;
+  opacity: 1;
 }
-.sp3{
-  left: 51%;
-  bottom: 10px;
-}
+
+
+/*     end span-content */
